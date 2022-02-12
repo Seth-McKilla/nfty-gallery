@@ -1,1 +1,1 @@
-export { default } from "./Scene";
+export { default as Ground } from "./Ground";

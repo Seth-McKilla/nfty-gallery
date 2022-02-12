@@ -46,16 +46,17 @@ function CanvasLayout({ children }: CanvasLayoutProps) {
           backgroundColor: "black",
         }}
         // pixelRatio={pixelRatio}
-        camera={{
-          position: [0, 0, 3],
-          aspect: aspectRatio,
-          near: 0.1,
-          far: 100,
+        shadows
+        gl={{ alpha: false }}
+        camera={{ fov: 45 }}
+        raycaster={{
+          computeOffsets: (e) => ({
+            offsetX: e.target.width / 2,
+            offsetY: e.target.height / 2,
+          }),
         }}
       >
         {children}
-
-        <Perf position={"bottom-right"} />
       </StyledCanvas>
     </>
   );

@@ -1,8 +1,10 @@
 import { useControls } from "leva";
-import Scene from "../components/scenes/index";
-import CanvasLayout from "../components/canvas/index";
-import Layout from "../components/layout/index";
+import { Sky, PointerLockControls } from "@react-three/drei";
+import { Physics } from "@react-three/cannon";
 import GlobalStyles from "../components/GlobalStyles";
+import CanvasLayout from "../components/canvas";
+import Layout from "../components/layout";
+import { Ground } from "../components/scenes";
 
 export default function Home() {
   const { color, hoverColor } = useControls({
@@ -17,7 +19,8 @@ export default function Home() {
         description={"Your personal virtual 3D NFT art gallery."}
       >
         <CanvasLayout>
-          <Scene color={color} hoverColor={hoverColor} />
+          <Sky sunPosition={[100, 20, 100]} />
+          <Ground color={color} hoverColor={hoverColor} />
         </CanvasLayout>
       </Layout>
       <GlobalStyles />
