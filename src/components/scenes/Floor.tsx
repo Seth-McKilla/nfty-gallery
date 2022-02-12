@@ -12,7 +12,7 @@ export default function Floor() {
       <planeGeometry args={[1000, 1000]} />
       <meshStandardMaterial
         map={texture}
-        map-repeat={[240, 240]}
+        map-repeat={[750, 750]}
         color="gray"
       />
     </mesh>
