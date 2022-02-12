@@ -3,7 +3,7 @@ import { Physics } from "@react-three/cannon";
 import GlobalStyles from "../components/GlobalStyles";
 import CanvasLayout from "../components/canvas";
 import Layout from "../components/layout";
-import { Floor, Player } from "../components/scenes";
+import { Floor, Wall, Player } from "../components/scenes";
 
 export default function Home() {
   return (
@@ -18,6 +18,7 @@ export default function Home() {
           <pointLight castShadow intensity={0.8} position={[100, 100, 100]} />
           <Physics gravity={[0, -30, 0]}>
             <Floor />
+            <Wall rotation={[0, Math.PI / 2, 0]} position={[-20, 0, 0]} />
             <Player />
           </Physics>
           <PointerLockControls />
