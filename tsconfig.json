@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es6",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,16 +14,11 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "paths": {
-      "react-three-fiber": [
-        "./"
-      ]
+      "react-three-fiber": ["./"]
     },
     "incremental": true
   },
-  "typeRoots": [
-    "./typings",
-    "./node_modules/@types/"
-  ],
+  "typeRoots": ["./typings", "./node_modules/@types/"],
   "include": [
     "next-env.d.ts",
     "./src/**/*.ts",
@@ -35,7 +26,5 @@
     "**/*.tsx",
     "next.config.js"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

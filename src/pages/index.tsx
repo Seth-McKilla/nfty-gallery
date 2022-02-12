@@ -5,19 +5,22 @@ import Layout from "../components/layout/index";
 import GlobalStyles from "../components/GlobalStyles";
 
 export default function Home() {
-    const { color, hoverColor } = useControls({
-        color: "#bab568",
-        hoverColor: "#1b3984",
-    });
+  const { color, hoverColor } = useControls({
+    color: "#bab568",
+    hoverColor: "#1b3984",
+  });
 
-    return (
-        <>
-            <Layout title={"First"}>
-                <CanvasLayout>
-                    <Scene color={color} hoverColor={hoverColor} />
-                </CanvasLayout>
-            </Layout>
-            <GlobalStyles />
-        </>
-    );
+  return (
+    <>
+      <Layout
+        title={"Nfty Wallet"}
+        description={"Your personal virtual 3D NFT art gallery."}
+      >
+        <CanvasLayout>
+          <Scene color={color} hoverColor={hoverColor} />
+        </CanvasLayout>
+      </Layout>
+      <GlobalStyles />
+    </>
+  );
 }
